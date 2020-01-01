@@ -4,16 +4,20 @@
   "description": "This is a website for Ristorante Con Fusion",
   "main": "index.html",
   "scripts": {
-    "start": "npm run lite",
+    "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
-    "scss": "node-sass -o css/ css/"
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
   },
-  "author": "",
+  "author": "Sanket",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.3.0",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "onchange": "^6.1.0",
+    "parallelshell": "^3.0.1"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
@@ -21,5 +25,13 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "popper.js": "^1.12.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manmodesanket/Webpages-using-Bootstrap4.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manmodesanket/Webpages-using-Bootstrap4/issues"
+  },
+  "homepage": "https://github.com/manmodesanket/Webpages-using-Bootstrap4#readme"
 }
